@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<title>Ramen Timer</title>
+	<link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+	<style>
+	body{
+		background-color: #000000;
+		color : #ffffff;
+		text-align: center;
+	    font-family: 'Play', sans-serif;
+	}
+	div{
+	    display: block;
+		margin : 10px auto;
+		padding : 3px 0;
+		width : 90%;
+		height : 45px;
+		background-color: #676767;
+	}
+	.button{
+		cursor: pointer;
+	    font-size: 32px;
+	}
+	.button:hover{
+		background-color: #B0B0B0;
+	}
+
+	p{
+	    margin : 0;
+	}
+	p#bar {
+	    display: block;
+	    height: 45px;
+	    background-color: #000000;
+	}
+	p#text {
+	    position: relative;
+		top : -45px;
+		font-size: 40px;
+	}
+	</style>
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="ramen_timer.js"></script>
+</head>
+
+<body>
+<img src="ramen_timer_fig1.jpeg" id="start" height="110" width="110">
+<div id="graph">
+	<p id="bar"></p>
+	<p id="text"><span id="m">00</span>:<span id="s">00</span></p>
+</div>
+<div class="button" id="min">min++;</div>
+<div class="button" id="sec">sec+=10;</div>
+<div class="button" id="startbutton">start();</div>
+<div class="button" id="resetbutton">reset();</div>
+</body>
+</html>
